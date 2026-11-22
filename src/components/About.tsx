@@ -6,7 +6,7 @@ import SectionLabel from './ui/SectionLabel';
 import Reveal from './ui/Reveal';
 
 const STATEMENT =
-  'I study Artificial Intelligence & Machine Learning and build full-stack products — LLM-driven document intelligence, payment rails with strict state machines, and SaaS platforms that keep every tenant in its own lane.';
+  'I work across production and application support, investigating enterprise SaaS issues, validating data and APIs, and coordinating engineering teams toward stable, well-documented resolutions.';
 
 /** Oversized statement whose words light up as you scroll past — like a lamp warming up. */
 function ScrubStatement() {
