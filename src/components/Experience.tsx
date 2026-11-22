@@ -87,7 +87,7 @@ export default function Experience() {
       <div className="mt-20 md:mt-24">
         <div className="mb-6 flex items-baseline justify-between gap-4">
           <h3 className="font-mono text-[11px] tracking-[0.2em] text-muted uppercase">Certifications · {certifications.length}</h3>
-          <span className="text-xs text-faint">Each links to its credential</span>
+          <span className="text-xs text-faint">Professional recognition</span>
         </div>
         <ul className="grid gap-px overflow-hidden rounded-[3px] border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
           {certifications.map((c, i) => (
