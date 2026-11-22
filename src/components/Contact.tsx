@@ -1,37 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import { ArrowUp, ArrowUpRight, Check, Copy, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp, ArrowUpRight, Linkedin } from 'lucide-react';
 import { profile } from '../data/portfolio';
 import { scrollToId } from '../lib/scroll';
 import SectionLabel from './ui/SectionLabel';
 import SplitText from './ui/SplitText';
 import Magnetic from './ui/Magnetic';
 import Reveal from './ui/Reveal';
-
-function CopyEmail() {
-  const [copied, setCopied] = useState(false);
-  const t = useRef(0);
-  useEffect(() => () => window.clearTimeout(t.current), []);
-  return (
-    <button
-      type="button"
-      onClick={async () => {
-        try {
-          await navigator.clipboard.writeText(profile.email);
-          setCopied(true);
-          t.current = window.setTimeout(() => setCopied(false), 1800);
-        } catch {
-          window.location.href = `mailto:${profile.email}`;
-        }
-      }}
-      className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm text-muted transition-colors hover:border-fg hover:text-fg"
-      aria-live="polite"
-    >
-      {copied ? <Check size={14} /> : <Copy size={14} />}
-      {copied ? 'Copied to clipboard' : 'Copy email'}
-    </button>
-  );
-}
 
 function BackToTop() {
   const { scrollYProgress } = useScroll();
@@ -54,7 +28,6 @@ function BackToTop() {
 
 const links = [
   { label: 'LinkedIn', href: profile.links.linkedin, icon: Linkedin, note: 'Connect' },
-  { label: 'Email', href: `mailto:${profile.email}`, icon: Mail, note: 'Write to me' },
 ];
 
 export default function Contact() {
@@ -75,25 +48,15 @@ export default function Contact() {
             </p>
             <Magnetic strength={0.15} className="mt-6 max-w-full">
               <a
-                href={`mailto:${profile.email}`}
-                className="group relative inline-block max-w-full text-[clamp(1.35rem,2.8vw,2.5rem)] font-medium tracking-[-0.035em] break-all"
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex max-w-full items-center gap-3 text-[clamp(1.35rem,2.8vw,2.5rem)] font-medium tracking-[-0.035em]"
               >
-                {profile.email}
-                <span className="absolute -bottom-1 left-0 h-[2px] w-full origin-right scale-x-0 bg-fg transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:origin-left group-hover:scale-x-100" />
+                Connect with me on LinkedIn
+                <ArrowUpRight size={20} className="shrink-0 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </Magnetic>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <CopyEmail />
-              <Magnetic>
-                <a
-                  href={`mailto:${profile.email}?subject=${encodeURIComponent("Hello Shahid — let's connect")}`}
-                  className="group inline-flex items-center gap-2 rounded-full bg-fg px-5 py-2 text-sm font-medium text-bg"
-                >
-                  Start a conversation
-                  <ArrowUpRight size={14} className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-              </Magnetic>
-            </div>
           </Reveal>
         </div>
 
