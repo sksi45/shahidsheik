@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import { prefersReducedMotion } from '../../lib/theme';
 
 /**
- * Sushmita stands at the centre of three tilted, gyroscope-like orbits of her skills.
+ * An abstract operations graphic sits at the centre of three tilted skill orbits.
  *
- * — She faces you by default. Scrolling turns her (an 80-frame turntable cut from video);
+ * — The graphic rotates with scrolling and returns smoothly when scrolling stops;
  *   when scrolling stops she eases back round to face front.
  * — Each ring carries two skill categories, has a visible orbit path and a glowing comet.
  *   Skills nearer the viewer grow and pass in front of her; those behind soften out of focus.
@@ -13,7 +13,7 @@ import { prefersReducedMotion } from '../../lib/theme';
  * in every browser. Drag or arrow keys spin her too.
  */
 
-const SPRITE = { src: '/assets/spin-sprite.webp', frames: 80, cols: 10, fw: 300, fh: 830 };
+const SPRITE = { frames: 360, fw: 300, fh: 830 };
 const PERSPECTIVE = 1500;
 
 type Ring = {
@@ -70,38 +70,48 @@ export default function TechOrbit({ rings: groups }: { rings: string[][] }) {
       figTop = 0,
       Rmax = 0;
 
-    // ── her ─────────────────────────────────────────────────────────
-    const sprite = new Image();
-    sprite.decoding = 'async';
-    let spriteReady = false;
+    // ── abstract systems illustration (no template-owner portrait) ──
+    let spriteReady = true;
     const paintFigure = (force = false) => {
-      if (!spriteReady) return;
       const deg = ((-spin % 360) + 360) % 360;
-      const f = Math.round((deg / 360) * SPRITE.frames) % SPRITE.frames;
+      const f = Math.round(deg) % 360;
       if (f === frame && !force) return;
       frame = f;
       const c = canvas.current!;
-      c.dataset.frame = String(f); // which of the 80 angles is showing (0 = facing front)
-      const { fw, fh, cols } = SPRITE;
-      ctx.globalCompositeOperation = 'source-over';
+      c.dataset.frame = String(f);
       ctx.clearRect(0, 0, c.width, c.height);
-      ctx.drawImage(sprite, (f % cols) * fw, Math.floor(f / cols) * fh, fw, fh, 0, 0, c.width, c.height);
-      const [r, g, b] = bgRgb();
-      const dark = document.documentElement.dataset.theme !== 'light';
-      const grad = ctx.createLinearGradient(0, 0, 0, c.height);
-      grad.addColorStop(0, `rgba(${r},${g},${b},0)`);
-      grad.addColorStop(dark ? 0.74 : 0.9, `rgba(${r},${g},${b},0)`);
-      grad.addColorStop(1, `rgba(${r},${g},${b},${dark ? 0.85 : 0.45})`);
-      ctx.globalCompositeOperation = 'source-atop';
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, c.width, c.height);
-      ctx.globalCompositeOperation = 'source-over';
+      const fg = getComputedStyle(document.documentElement).getPropertyValue('--fg').trim() || '#ffffff';
+      ctx.save();
+      ctx.translate(c.width / 2, c.height / 2);
+      ctx.rotate((spin * Math.PI) / 180);
+      ctx.strokeStyle = fg;
+      ctx.fillStyle = fg;
+      ctx.globalAlpha = 0.42;
+      ctx.lineWidth = 2;
+      for (let i = 0; i < 3; i++) {
+        ctx.save();
+        ctx.rotate((i * Math.PI) / 3);
+        ctx.beginPath();
+        ctx.ellipse(0, 0, 112 + i * 18, 190 + i * 18, 0, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+      ctx.globalAlpha = 0.72;
+      ctx.strokeRect(-74, -105, 148, 210);
+      ctx.fillRect(-48, -72, 96, 8);
+      ctx.fillRect(-48, -48, 68, 5);
+      ctx.fillRect(-48, -28, 82, 5);
+      ctx.beginPath();
+      ctx.arc(0, 0, 24, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(-52, 58); ctx.lineTo(52, 58);
+      ctx.moveTo(-52, 76); ctx.lineTo(28, 76);
+      ctx.stroke();
+      ctx.restore();
     };
-    sprite.onload = () => {
-      spriteReady = true;
-      paintFigure(true);
-      figureWrap.current?.classList.add('is-ready');
-    };
+    paintFigure(true);
+    figureWrap.current?.classList.add('is-ready');
 
     // ── layout ──────────────────────────────────────────────────────
     const layout = () => {
@@ -310,7 +320,7 @@ export default function TechOrbit({ rings: groups }: { rings: string[][] }) {
       ref={stage}
       tabIndex={0}
       role="img"
-      aria-label={`Sushmita at the centre of three orbits of her skills: ${groups.flat().join(', ')}. Scroll, drag or use the arrow keys to turn her.`}
+      aria-label={`Abstract systems graphic at the centre of three skill orbits: ${groups.flat().join(', ')}. Scroll, drag or use the arrow keys to rotate the graphic.`}
       data-cursor="pull"
       data-cursor-label="Spin"
       className="orbit-stage relative h-[78svh] max-h-[760px] min-h-[520px] cursor-grab touch-pan-y overflow-hidden select-none active:cursor-grabbing md:h-[94svh] md:max-h-[980px] md:min-h-[640px]"
