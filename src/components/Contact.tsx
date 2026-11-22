@@ -126,7 +126,7 @@ export default function Contact() {
         <div className="flex flex-col-reverse gap-6 py-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1 text-sm text-muted">
             <p>
-              © {new Date().getFullYear()} {profile.name}. Designed &amp; built by me.
+              © {new Date().getFullYear()} {profile.name}. Production &amp; application support portfolio.
             </p>
             <p className="font-mono text-[11px] tracking-[0.12em] text-faint uppercase">React · TypeScript · GSAP · Framer Motion · Lenis</p>
           </div>
