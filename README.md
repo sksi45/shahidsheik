@@ -1,4 +1,4 @@
-# Sushmita Dasari — Portfolio
+# Shahid Sheik — Production & Application Support Portfolio
 
 An interactive personal portfolio with two complete looks, dark and light, switched by pulling a hanging cord in the top-right corner.
 
@@ -25,16 +25,16 @@ The finished site is written to `dist/`. Upload the contents of `dist/` to any s
 
 ## Edit the content
 
-Every fact on the site lives in **`src/data/portfolio.ts`**: name, links, roles, stats, education, skills, projects, experience, recognition and certifications. Change it there and the whole site follows.
+Portfolio content lives in **`src/data/portfolio.ts`**: profile, links, support case studies, skills, experience and education.
 
 Other things you may want to change:
 
 | What | Where |
 |---|---|
-| Résumé PDF (download buttons) | `public/assets/Sushmita_Dasari_Resume.pdf` |
+| Résumé PDF (download buttons) | Contact section (resume link is intentionally omitted until a verified PDF is added) |
 | Theme colours (dark and light) | top of `src/index.css` |
-| Hero video | `public/assets/hero-walk.webm` (Chrome, Firefox, Edge) and `hero-walk.mov` (Safari) |
-| Spinning figure in Skills | `public/assets/spin-sprite.webp` (80 frames, 10 × 8 grid, 300 × 830 each) |
+| Hero video | Abstract systems artwork in `src/components/HeroVideo.tsx` |
+| Spinning figure in Skills | Theme-sensitive abstract artwork |
 
 ## How the site is put together
 
@@ -50,5 +50,5 @@ Other things you may want to change:
 
 ## Notes
 
-- The hero and Skills videos use transparent backgrounds, so they sit directly on the page in both themes.
+- The hero artwork is abstract and contains no template-owner portrait or personal footage.
 - Visitors who have "reduce motion" turned on get still images and no auto-animation; the cord still works.
