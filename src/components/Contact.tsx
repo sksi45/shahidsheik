@@ -103,7 +103,7 @@ export default function Contact() {
             <Reveal as="li" key={l.label} delay={i * 0.06}>
               <a
                 href={l.href}
-                {...(l.download ? { download: true } : l.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
+                {...(l.href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
                 className="group flex items-center justify-between gap-4 border-t border-line py-3.5 transition-colors last:border-b"
               >
                 <span className="flex items-center gap-4">
