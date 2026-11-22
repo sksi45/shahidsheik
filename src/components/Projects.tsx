@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
-import { ArrowRight, ArrowUpRight, Github, Lock, X } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 import { projects, type Project } from '../data/portfolio';
 import { lockScroll } from '../lib/scroll';
 import ProjectVisual from './ProjectVisual';
@@ -99,15 +99,7 @@ function ProjectCard({ p, i, onOpen }: { p: Project; i: number; onOpen: () => vo
               Case study
               <ArrowRight size={14} className="transition-transform duration-500 group-hover:translate-x-1" />
             </button>
-            {p.github ? (
-              <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-fg">
-                <Github size={14} /> Source
-              </a>
-            ) : (
-              <span className="inline-flex items-center gap-1.5 text-sm text-faint">
-                <Lock size={12} /> Private repo
-              </span>
-            )}
+
           </div>
         </div>
       </article>
@@ -168,7 +160,7 @@ function CaseStudy({ p, onClose, onNext }: { p: Project; onClose: () => void; on
       >
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-bg/90 px-4 py-4 backdrop-blur md:px-10">
           <span className="font-mono text-[11px] tracking-[0.2em] text-muted uppercase">
-            Case study {p.index} / 0{projects.length}
+            Support case study {p.index} / 0{projects.length}
           </span>
           <button ref={closeRef} type="button" onClick={onClose} aria-label="Close case study" className="grid h-10 w-10 place-items-center rounded-full border border-line transition-colors hover:bg-fg hover:text-bg">
             <X size={16} />
@@ -241,15 +233,6 @@ function CaseStudy({ p, onClose, onNext }: { p: Project; onClose: () => void; on
                   ))}
                 </ul>
                 <div className="mt-10 flex flex-wrap gap-3">
-                  {p.github ? (
-                    <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-fg px-5 py-3 text-sm font-medium text-bg">
-                      <Github size={15} /> View on GitHub <ArrowUpRight size={14} />
-                    </a>
-                  ) : (
-                    <span className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm text-muted">
-                      <Lock size={14} /> Repository is private for now
-                    </span>
-                  )}
                   {p.live && (
                     <a href={p.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm">
                       Live site <ArrowUpRight size={14} />
@@ -266,7 +249,7 @@ function CaseStudy({ p, onClose, onNext }: { p: Project; onClose: () => void; on
               aria-label={`Next case study: ${next.title}`}
             >
               <span>
-                <span className="font-mono text-[11px] tracking-[0.2em] text-muted uppercase">Next project</span>
+                <span className="font-mono text-[11px] tracking-[0.2em] text-muted uppercase">Next case study</span>
                 <span className="mt-3 block text-[clamp(2rem,5vw,4.5rem)] leading-[0.95] font-medium tracking-[-0.05em] transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-x-3">
                   {next.title}
                 </span>
@@ -292,11 +275,11 @@ export default function Projects() {
         <div>
           <SectionLabel index="03">Selected projects</SectionLabel>
           <h2 id="projects-title" className="mt-6 text-[clamp(2rem,4vw,3.6rem)] leading-[0.98] font-medium tracking-[-0.045em]">
-            <SplitText text="Systems I've built" className="block" />
-            <SplitText text="and shipped." delay={0.12} className="block font-serif font-normal tracking-[-0.03em] italic" />
+            <SplitText text="Systems I've supported" className="block" />
+            <SplitText text="and helped keep reliable." delay={0.12} className="block font-serif font-normal tracking-[-0.03em] italic" />
           </h2>
         </div>
-        <p className="max-w-[34ch] text-sm text-muted md:text-right">Three projects from 2026. Open any card for the full case study.</p>
+        <p className="max-w-[34ch] text-sm text-muted md:text-right">Selected production-support case studies. Open a card to see the work I contributed.</p>
       </div>
 
       <ul className="grid gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
