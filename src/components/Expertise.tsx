@@ -9,9 +9,9 @@ const byId = (id: string) => skillCategories.find((c) => c.id === id)?.skills ??
 const ORBITS = (() => {
   const seen = new Set<string>();
   return [
-    ['languages', 'ai'],
-    ['frontend', 'backend'],
-    ['databases', 'tools'],
+    ['support', 'data'],
+    ['platforms', 'observability'],
+    ['cloud', 'collaboration'],
   ].map((ids) => ids.flatMap(byId).filter((s) => !seen.has(s) && (seen.add(s), true)));
 })();
 import SectionLabel from './ui/SectionLabel';
@@ -70,7 +70,7 @@ export default function Expertise() {
           />
           <Reveal delay={0.2}>
             <p className="mt-6 max-w-[46ch] text-muted">
-              Every skill here comes straight from my résumé — no percentage bars. Hover one to see which project put it to work.
+              These skills reflect my production support experience and hands-on technical learning — no percentage bars. Hover one to see where it connects to a support case study.
             </p>
           </Reveal>
         </div>
@@ -78,7 +78,7 @@ export default function Expertise() {
 
       <Reveal className="-mx-4 mb-20 md:-mx-8 md:mb-28">
         <TechOrbit rings={ORBITS} />
-        <p className="mt-2 text-center font-mono text-[10px] tracking-[0.22em] text-faint uppercase">Scroll or drag to turn me · {ALL_SKILLS.length} skills in orbit</p>
+        <p className="mt-2 text-center font-mono text-[10px] tracking-[0.22em] text-faint uppercase">Scroll or drag to rotate the systems graphic · {ALL_SKILLS.length} skills in orbit</p>
       </Reveal>
 
       <div className="grid gap-12 md:grid-cols-12 md:gap-6">
