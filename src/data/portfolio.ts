@@ -7,7 +7,7 @@ export const profile = {
   location: 'Eluru, Andhra Pradesh, India',
   timezone: 'Asia/Kolkata',
   links: {
-    linkedin: 'https://www.linkedin.com/in/shahid-ibrahim-sk-1190',
+    linkedin: 'https://www.linkedin.com/in/shahid-ibrahim-1190a2163/',
     github: 'https://github.com/sksi45',
   },
   resume: '',
