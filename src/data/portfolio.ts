@@ -1,54 +1,42 @@
-/**
- * Every fact on this site comes from Sushmita_Dasari_Resume.pdf.
- * Edit here and the whole site follows. Don't add anything the resume doesn't support.
- */
-
+/** Portfolio content customized for Shahid Sheik. Keep claims factual; no invented performance metrics. */
 export const profile = {
-  fullName: 'Dasari Venkata Ratna Sri Sushmita',
-  name: 'Sushmita Dasari',
-  first: 'Sushmita',
-  email: 'sushmitadasari17@gmail.com',
-  location: 'Surampalem, Andhra Pradesh',
+  fullName: 'Shahid Sheik',
+  name: 'Shahid Sheik',
+  first: 'Shahid',
+  email: 'iiiks777@gmail.com',
+  location: 'Eluru, Andhra Pradesh, India',
   timezone: 'Asia/Kolkata',
   links: {
-    linkedin: 'https://www.linkedin.com/in/sushmita-dasari-227a40284/',
-    github: 'https://github.com/Sushmitadasari',
+    linkedin: 'https://www.linkedin.com/in/shahid-ibrahim-sk-1190',
+    github: 'https://github.com/sksi45',
   },
-  resume: '/assets/Sushmita_Dasari_Resume.pdf',
+  resume: '',
   portrait: {
-    src: '/assets/portrait-720.webp',
-    srcSet: '/assets/portrait-420.webp 420w, /assets/portrait-720.webp 720w, /assets/portrait-1100.webp 1100w',
-    width: 1100,
-    height: 1034,
-    alt: 'Portrait of Sushmita Dasari',
+    src: '',
+    srcSet: '',
+    width: 1,
+    height: 1,
+    alt: 'Abstract typographic artwork',
   },
-  /** Rotating hero designations — each one is backed by the resume. */
-  roles: ['Full-Stack Developer', 'AI & ML Engineer in the making', 'Java Developer', 'Problem Solver'],
-  availability: 'Open to opportunities',
-  interests: ['System Design', 'Cloud Computing (AWS)', 'Machine Learning'],
+  roles: ['Production Support Engineer', 'Application Support Engineer', 'Incident & Problem Management', 'Enterprise SaaS Support'],
+  availability: 'Open to international opportunities',
+  interests: ['Production Reliability', 'Cloud Operations', 'Observability', 'DevOps'],
 };
 
 export const stats = [
-  { value: 9.1, decimals: 2, suffix: '', label: 'CGPA, B.Tech AI & ML' },
-  { value: 850, decimals: 0, suffix: '+', label: 'DSA problems solved' },
-  { value: 16, decimals: 0, suffix: '', label: 'Industry certifications' },
-  { value: 1, decimals: 0, suffix: ' yr', label: 'Full-stack training' },
+  { value: 5, decimals: 0, suffix: '+', label: 'Years across IT & production support' },
+  { value: 3, decimals: 0, suffix: '', label: 'Core support domains' },
+  { value: 0, decimals: 0, suffix: '', label: 'Stakeholder escalations reported' },
+  { value: 1, decimals: 0, suffix: '', label: 'Support-first mindset' },
 ];
 
 export const education = [
   {
-    school: 'Aditya Engineering College',
-    place: 'Surampalem',
-    degree: 'B.Tech, Artificial Intelligence & Machine Learning',
-    period: 'Oct 2023 — Present',
-    score: 'CGPA 9.10',
-  },
-  {
-    school: 'Sri Chaitanya Junior College',
-    place: 'Kakinada',
-    degree: 'BIEAP, MPC',
-    period: 'Jun 2021 — May 2023',
-    score: '925 / 1000',
+    school: 'Sir C.R.R. College of Engineering',
+    place: 'Eluru, Andhra Pradesh',
+    degree: 'B.Tech, Computer Science & Engineering',
+    period: 'May 2015 — May 2019',
+    score: '',
   },
 ];
 
@@ -56,136 +44,99 @@ export type SkillCategory = { id: string; index: string; title: string; blurb: s
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'languages',
+    id: 'support',
     index: '01',
-    title: 'Languages',
-    blurb: 'Java is home base. Python for AI work, C and C++ for the fundamentals.',
-    skills: ['Java', 'Python', 'C', 'C++', 'JavaScript', 'SQL'],
+    title: 'Production Support',
+    blurb: 'Incident triage, business-impact assessment, SLA ownership, clear updates and reliable closure.',
+    skills: ['Incident Management', 'Problem Management', 'SLA Monitoring', 'Root-Cause Coordination', 'UAT Support', 'Runbooks'],
   },
   {
-    id: 'frontend',
+    id: 'data',
     index: '02',
-    title: 'Frontend',
-    blurb: 'Responsive interfaces built with React and the core web platform.',
-    skills: ['React', 'JavaScript', 'HTML', 'CSS'],
+    title: 'Data & Investigation',
+    blurb: 'Follow the data across systems, validate discrepancies and turn evidence into actionable findings.',
+    skills: ['SQL', 'SQL Server', 'Oracle Developer', 'Snowflake', 'DWH', 'SSIS', 'Excel', 'Data Reconciliation'],
   },
   {
-    id: 'backend',
+    id: 'platforms',
     index: '03',
-    title: 'Backend',
-    blurb: 'Service-oriented Node.js backends with secure, well-shaped APIs.',
-    skills: ['Node.js', 'Express.js', 'REST APIs', 'Microservices', 'JWT Auth', 'RBAC'],
+    title: 'Enterprise Platforms',
+    blurb: 'Hands-on application support across CRM, service management, payments and enterprise workflows.',
+    skills: ['Salesforce', 'ServiceNow', 'Siebel', 'SAP', 'JIRA', 'Wolken', 'Postman', 'Airtable'],
   },
   {
-    id: 'databases',
+    id: 'observability',
     index: '04',
-    title: 'Databases',
-    blurb: 'Relational and document stores, designed with indexing and normalization in mind.',
-    skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Indexing', 'Normalization'],
+    title: 'Monitoring & Reporting',
+    blurb: 'Use logs, dashboards and operational signals to isolate issues and communicate service health.',
+    skills: ['Splunk', 'Dynatrace', 'Looker', 'Tableau', 'Power BI', 'CloudWatch', 'KPI Reporting'],
   },
   {
-    id: 'ai',
+    id: 'cloud',
     index: '05',
-    title: 'AI & Machine Learning',
-    blurb: 'An AIML degree, put to work on LLM-powered document intelligence.',
-    skills: ['Machine Learning', 'Deep Learning', 'NLP', 'LLMs', 'Python'],
+    title: 'Cloud & Delivery',
+    blurb: 'Growing practical experience with cloud environments, containers and deployment workflows.',
+    skills: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Git', 'Linux', 'Helm'],
   },
   {
-    id: 'tools',
+    id: 'collaboration',
     index: '06',
-    title: 'Tools & Cloud',
-    blurb: 'Containerised, versioned and ready to deploy.',
-    skills: ['Docker', 'Docker Compose', 'Git', 'GitHub', 'Postman', 'AWS', 'Azure'],
+    title: 'Cross-Team Delivery',
+    blurb: 'Coordinate product, engineering, SRE, business teams and external vendors around resolution.',
+    skills: ['Stakeholder Updates', 'Vendor Coordination', 'Knowledge Management', 'Process Improvement', 'Documentation'],
   },
 ];
 
-export const fundamentals = ['DSA', 'Operating Systems', 'Computer Networks', 'DBMS', 'OOP', 'Collections', 'Multithreading'];
+export const fundamentals = ['SQL & Data Validation', 'Application Troubleshooting', 'Incident Lifecycle', 'Change & Release Support', 'SLA / Priority Management', 'Customer Communication'];
 
 export type Metric = { value: string; label: string };
 export type Project = {
-  id: string;
-  index: string;
-  title: string;
-  year: string;
-  kind: string;
-  summary: string;
-  stack: string[];
-  contribution: string[];
-  features: string[];
-  metrics: Metric[];
-  github?: string;
-  live?: string;
-  motif: 'scan' | 'flow' | 'tenants';
+  id: string; index: string; title: string; year: string; kind: string; summary: string;
+  stack: string[]; contribution: string[]; features: string[]; metrics: Metric[];
+  github?: string; live?: string; motif: 'scan' | 'flow' | 'tenants';
 };
 
 export const projects: Project[] = [
   {
-    id: 'policyguard-ai',
-    index: '01',
-    title: 'PolicyGuard AI',
-    year: '2026',
-    kind: 'AI · NLP · LLM',
-    summary:
-      'An AI-powered policy analysis platform that reads dense policy documents and answers questions about them — on the web, in a browser extension, on mobile and on desktop.',
-    stack: ['Python', 'NLP', 'LLM', 'REST API'],
+    id: 'ecommerce-cloud-reconciliation', index: '01', title: 'Enterprise Cloud Usage Reconciliation',
+    year: 'Production Support', kind: 'SaaS · Data Integrity · Operations',
+    summary: 'A support case study focused on investigating enterprise cloud usage and contract discrepancies across billing and usage systems.',
+    stack: ['SQL', 'Enterprise SaaS', 'Cloud Usage Metrics', 'Case Management'],
     contribution: [
-      'Built an AI-powered policy analysis platform across web, browser extension, mobile, and desktop applications, processing 500+ policy documents with 92% accuracy and reducing manual review time by 60% across 8 policy categories.',
-      'Engineered LLM-based Q&A, key-information extraction, and REST API integration for 10+ document types, enabling real-time policy insights and reducing decision turnaround time by 45%.',
+      'Investigate premium-cloud usage differences, missing server usage and contract recalculation concerns using available usage and account evidence.',
+      'Support reconciliation of enterprise metadata, Cloud Credits and TokenFlex-related usage while coordinating product and engineering investigation.',
+      'Document findings, affected accounts and case context so technical teams can reproduce and resolve the issue.',
     ],
-    features: ['LLM-based Q&A', 'Key-information extraction', '10+ document types', 'Four client platforms'],
-    metrics: [
-      { value: '500+', label: 'Policy documents processed' },
-      { value: '92%', label: 'Accuracy' },
-      { value: '60%', label: 'Less manual review time' },
-      { value: '45%', label: 'Faster decisions' },
-    ],
-    // Repo on the resume (github.com/Sushmitadasari/PolicyGuard-AI) is private for now — add `github` once public.
+    features: ['Usage discrepancy investigation', 'Contract and usage reconciliation', 'Evidence-led case updates', 'Cross-team resolution'],
+    metrics: [{ value: 'ECCR', label: 'Support domain' }, { value: 'SLA', label: 'Priority focus' }, { value: 'Data', label: 'Integrity' }],
     motif: 'scan',
   },
   {
-    id: 'payment-gateway',
-    index: '02',
-    title: 'Payment Gateway System',
-    year: '2026',
-    kind: 'Full-Stack · Fintech · Microservices',
-    summary:
-      'A full-stack UPI and card payment gateway built around a strict payment state machine, packaged as Dockerized microservices.',
-    stack: ['Node.js', 'Express', 'PostgreSQL', 'React', 'Docker'],
+    id: 'partner-web-services', index: '02', title: 'Partner Web Services & Order Integrity',
+    year: 'Production Support', kind: 'API · Payments · Salesforce',
+    summary: 'A production support workflow for critical partner API and order failures, with validation from request through backend and CRM records.',
+    stack: ['Postman', 'Salesforce', 'JIRA', 'API Validation'],
     contribution: [
-      'Built a full-stack UPI & card payment gateway processing 1,000+ transactions at 99.8% uptime with a strict payment state machine (processing → success / failed).',
-      'Dockerized the microservice architecture, cutting deployment setup by 70%; backend optimizations reduced API response time by 40% and tripled throughput under load.',
+      'Validate partner case APIs and backend behavior with Postman, then verify relevant Salesforce records and order state.',
+      'Investigate critical order failures and data-integrity issues, capturing reproducible details and business impact.',
+      'Escalate systemic or multi-partner patterns to Engineering through JIRA with clear evidence and affected-case context.',
     ],
-    features: ['UPI & card payments', 'Strict state machine', 'Dockerized microservices', 'Load-tuned backend'],
-    metrics: [
-      { value: '1,000+', label: 'Transactions processed' },
-      { value: '99.8%', label: 'Uptime' },
-      { value: '40%', label: 'Faster API responses' },
-      { value: '3×', label: 'Throughput under load' },
-    ],
-    github: 'https://github.com/Sushmitadasari/Payment-gateway-system-Project',
+    features: ['API request validation', 'CRM cross-checks', 'Critical order triage', 'Engineering handoff'],
+    metrics: [{ value: 'PWS', label: 'Support domain' }, { value: 'API', label: 'Validation' }, { value: 'P1', label: 'Critical triage' }],
     motif: 'flow',
   },
   {
-    id: 'multi-tenant-saas',
-    index: '03',
-    title: 'Multi-Tenant SaaS Platform',
-    year: '2026',
-    kind: 'SaaS · Security · DevOps',
-    summary:
-      'Shared-database multi-tenancy with strict tenant isolation, four levels of role-based access, and a one-command deployment.',
-    stack: ['Node.js', 'React', 'PostgreSQL', 'Docker Compose'],
+    id: 'customer-platform-sync', index: '03', title: 'Customer Platform Data & Access Support',
+    year: 'Production Support', kind: 'CRM · Identity · Enterprise Systems',
+    summary: 'Operational support for customer-data synchronization, permissions and configuration across connected business applications.',
+    stack: ['Salesforce', 'ServiceNow', 'SQL', 'JIRA'],
     contribution: [
-      'Architected shared-database multi-tenancy for 50+ concurrent tenants with strict tenant_id isolation and 4-level JWT/RBAC, achieving zero unauthorized-access incidents across 200+ users.',
-      'Implemented Docker Compose one-command deployment, reducing environment setup time from 45 minutes to under 2 minutes.',
+      'Trace user-data synchronization between Salesforce and internal tools, checking records, access and configuration.',
+      'Support permission and access investigations while preserving clear case history and operational controls.',
+      'Coordinate data, configuration and platform enhancement requests with the appropriate support and engineering owners.',
     ],
-    features: ['tenant_id isolation', '4-level JWT / RBAC', 'One-command deploy', '50+ concurrent tenants'],
-    metrics: [
-      { value: '50+', label: 'Concurrent tenants' },
-      { value: '200+', label: 'Users' },
-      { value: '0', label: 'Unauthorized-access incidents' },
-      { value: '<2 min', label: 'Setup, down from 45' },
-    ],
-    github: 'https://github.com/Sushmitadasari/Multi-Tenant-SaaS-Platform',
+    features: ['Data synchronization', 'Access and permission checks', 'Configuration investigation', 'Enhancement coordination'],
+    metrics: [{ value: 'CEP / AA', label: 'Support areas' }, { value: 'Access', label: 'Controls' }, { value: 'Sync', label: 'Data flow' }],
     motif: 'tenants',
   },
 ];
@@ -194,105 +145,69 @@ export type TimelineItem = { period: string; title: string; org: string; place?:
 
 export const timeline: TimelineItem[] = [
   {
-    period: 'May 2025 — Jun 2026',
-    title: 'Full-Stack Development Trainee',
-    org: 'Technical Hub Pvt Ltd',
-    place: 'Surampalem, AP',
+    period: 'Oct 2022 — Present',
+    title: 'Application / Production Support Engineer',
+    org: 'Autodesk',
+    place: 'India · Enterprise SaaS Support',
     kind: 'Work',
     points: [
-      'Completed one year of intensive Full-Stack Development training covering frontend, backend, database integration, and deployment workflows.',
-      'Developed responsive, functional web applications — user interfaces, server-side logic, and database connectivity.',
-      'Deployed and managed web applications with version control, debugging, and end-to-end development practices.',
+      'Support enterprise application workflows across ECCR, PWS, CEP/AA and related cross-functional incidents.',
+      'Investigate production issues using SQL, Salesforce, APIs, logs, dashboards and business-system evidence.',
+      'Coordinate with Salesforce, SAP, Engineering, SRE, Product Support, BI and external vendors for complex or P1 issues.',
+      'Maintain SLA discipline, concise stakeholder communication, case notes and actionable handoffs; recognized as a top performer with no stakeholder escalations reported.',
     ],
   },
   {
-    period: 'Oct 2023 — Present',
-    title: 'B.Tech, Artificial Intelligence & Machine Learning',
-    org: 'Aditya Engineering College',
-    place: 'Surampalem',
-    kind: 'Education',
-    points: ['CGPA 9.10.', 'AIML Branch Topper with a 9.24 SGPA for the semester.'],
+    period: 'Mar 2022 — Sep 2022',
+    title: 'IT / Business Intelligence Support',
+    org: 'CDK Global',
+    place: 'India',
+    kind: 'Work',
+    points: [
+      'Supported Tableau, Salesforce and Jira workflows, dashboards and business reporting.',
+      'Contributed to a COVID Employee Wellness Survey HR/BI dashboard and process documentation.',
+      'Worked with CSD, IT/BI administrators, content authors and data stewards on operational requests.',
+    ],
   },
   {
-    period: 'Jun 2021 — May 2023',
-    title: 'Intermediate, MPC',
-    org: 'Sri Chaitanya Junior College',
-    place: 'Kakinada',
+    period: 'Oct 2020 — Feb 2022',
+    title: 'Application Support',
+    org: 'IBM',
+    place: 'India',
+    kind: 'Work',
+    points: [
+      'Provided production support for SQL data extraction, web/client applications, file feeds and batch processes.',
+      'Collaborated with developers, analysts and project managers; supported weekend operations when required.',
+      'Prepared evidence and documentation for SEBI audit activities and supported incident, problem and change workflows.',
+    ],
+  },
+  {
+    period: 'May 2015 — May 2019',
+    title: 'B.Tech, Computer Science & Engineering',
+    org: 'Sir C.R.R. College of Engineering',
+    place: 'Eluru, Andhra Pradesh',
     kind: 'Education',
-    points: ['BIEAP — scored 925 / 1000.'],
+    points: ['Graduated with a foundation in computer science, databases and software systems.'],
   },
 ];
 
 export type Recognition = { title: string; org: string; detail: string; kind: string; link?: string };
-
 export const recognitions: Recognition[] = [
-  {
-    title: 'Tech Fellow',
-    org: 'AlgoUniversity',
-    kind: 'Fellowship',
-    detail: 'Selected through competitive national selection — advanced DSA, algorithm optimization, and competitive coding.',
-  },
-  {
-    title: 'Semi-Finalist',
-    org: 'Flipkart GRiD 7.0',
-    kind: 'Hackathon',
-    detail: 'Competed among top national engineering talent.',
-    link: 'https://drive.google.com/file/d/16pXA2hssyJqlYMr27wfi6U4bjKDLvh9f/view?usp=drive_link',
-  },
-  {
-    title: 'AIML Branch Topper',
-    org: 'Aditya Engineering College',
-    kind: 'Academic',
-    detail: '9.24 SGPA for the semester.',
-  },
-  {
-    title: '850+ problems solved',
-    org: 'LeetCode · GFG · CodeChef',
-    kind: 'Competitive coding',
-    detail: 'LeetCode 350+ (peak rating 1442) · GFG 300+ (rating 1436) · CodeChef 200+.',
-  },
-  {
-    title: '5-star badges',
-    org: 'HackerRank',
-    kind: 'Competitive coding',
-    detail: 'Five stars in C, Python, Java, and SQL.',
-  },
+  { title: 'Top Performer', org: 'Production / Application Support', kind: 'Recognition', detail: 'Recognized for dependable support delivery and disciplined case ownership.' },
+  { title: 'SLA-focused delivery', org: 'Enterprise Support', kind: 'Operations', detail: 'Maintains strict SLA adherence and reports no stakeholder escalations.' },
 ];
 
 export type Certification = { issuer: string; name: string; link: string };
-
-export const certifications: Certification[] = [
-  { issuer: 'AWS', name: 'AWS Certified AI Practitioner', link: 'https://drive.google.com/file/d/1h8e5p0a9T6f5gBaOP2ROfwWHZfkkspGn/view?usp=drive_link' },
-  { issuer: 'AWS', name: 'AWS Academy Graduate — Cloud Foundations', link: 'https://www.credly.com/badges/2d4810f9-3dbe-444d-99b9-61312ea5e7df/public_url' },
-  { issuer: 'MongoDB', name: 'MongoDB Certified Associate Developer', link: 'https://www.credly.com/badges/fd3362bd-743a-4c4d-a68e-b1fdc5d46811/public_url' },
-  { issuer: 'GitHub', name: 'GitHub Foundations', link: 'https://drive.google.com/file/d/1o0fkCAMRWTg1oMwxlqu6t6wnOpBv66Vq/view?usp=sharing' },
-  { issuer: 'Oracle', name: 'Java Certified Foundations Associate', link: 'https://drive.google.com/file/d/1g-yyceHtLg_k2RWiOIJqH0MMcGlaH90P/view?usp=sharing' },
-  { issuer: 'Oracle', name: 'Oracle Certified Foundations Associate — Database', link: 'https://drive.google.com/file/d/10-DzabbcH2vHrI6bAohoT8czKRZMa2kV/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Database Management System', link: 'https://drive.google.com/file/d/1MqkJHchXeaGD4S8mzPmEGxEYddAsxAjN/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Fundamentals of Artificial Intelligence', link: 'https://drive.google.com/file/d/1GqyUQ-lrE-bHaN457t6fIdssgGG4HMXf/view?usp=drive_link' },
-  { issuer: 'NPTEL', name: 'Deep Learning', link: 'https://drive.google.com/file/d/1PWSRP5SQDPzkoTCF3A24eIJoSpTwgsff/view?usp=sharing' },
-  { issuer: 'Pearson', name: 'IT Specialist — HTML and CSS', link: 'https://www.credly.com/badges/e4a55298-e396-41d8-a032-283aafe9fab7/public_url' },
-  { issuer: 'Cisco', name: 'HTML Essentials', link: 'https://www.credly.com/badges/eb27ca95-3b2a-4948-bef9-0385d1d49055/public_url' },
-  { issuer: 'Cisco', name: 'CSS Essentials', link: 'https://www.credly.com/badges/3b37497f-6a61-4889-af3c-ed337a460a0b/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 1', link: 'https://www.credly.com/badges/9cdd4d55-6ecc-463f-b254-811ccdd0539c/public_url' },
-  { issuer: 'Cisco', name: 'JavaScript Essentials 2', link: 'https://www.credly.com/badges/0e1b036e-4318-4c8e-b750-2aca77314442/public_url' },
-  { issuer: 'Cisco', name: 'Python Essentials 1', link: 'https://www.credly.com/badges/0e21e3eb-d8ef-4770-95d7-dcbd6f8696b1/public_url' },
-  { issuer: 'Udemy', name: 'Microsoft Azure Hands-On (AZ-900, AZ-104, AZ-305)', link: 'https://drive.google.com/file/d/1KrXClhY0nJ3Acxs7DioNf4Q1rpaMvgPT/view?usp=sharing' },
-];
+export const certifications: Certification[] = [];
 
 export const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'expertise', label: 'Expertise' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'home', label: 'Home' }, { id: 'about', label: 'About' }, { id: 'expertise', label: 'Expertise' },
+  { id: 'projects', label: 'Support Work' }, { id: 'experience', label: 'Experience' }, { id: 'contact', label: 'Contact' },
 ];
 
-/** Which projects use a given skill — used by the Expertise section. */
 export function projectsUsing(skill: string): string[] {
-  const s = skill.toLowerCase().replace(/\.js$/, '');
-  return projects
-    .filter((p) => p.stack.some((t) => t.toLowerCase().replace(/\.js$/, '') === s || (s === 'llms' && t === 'LLM') || (s === 'rest apis' && t === 'REST API') || (s === 'docker' && t.startsWith('Docker'))))
+  const s = skill.toLowerCase().replace(/\\.js$/, '');
+  return projects.filter((p) => p.stack.some((t) => t.toLowerCase().replace(/\\.js$/, '') === s
+    || (s === 'rest apis' && t === 'REST API') || (s === 'docker' && t.startsWith('Docker'))))
     .map((p) => p.title);
 }
