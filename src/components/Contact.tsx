@@ -54,7 +54,7 @@ function BackToTop() {
 
 const links = [
   { label: 'LinkedIn', href: profile.links.linkedin, icon: Linkedin, note: 'Connect' },
-  { label: 'GitHub', href: profile.links.github, icon: Github, note: '@Sushmitadasari' },
+  { label: 'GitHub', href: profile.links.github, icon: Github, note: '@Shahiddasari' },
   { label: 'Email', href: `mailto:${profile.email}`, icon: Mail, note: 'Write to me' },
   { label: 'Résumé', href: profile.resume, icon: Download, note: 'PDF', download: true },
 ];
@@ -88,7 +88,7 @@ export default function Contact() {
               <CopyEmail />
               <Magnetic>
                 <a
-                  href={`mailto:${profile.email}?subject=${encodeURIComponent("Hello Sushmita — let's work together")}`}
+                  href={`mailto:${profile.email}?subject=${encodeURIComponent("Hello Sushmita — let's connect")}`}
                   className="group inline-flex items-center gap-2 rounded-full bg-fg px-5 py-2 text-sm font-medium text-bg"
                 >
                   Start a conversation
