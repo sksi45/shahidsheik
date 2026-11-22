@@ -25,11 +25,7 @@ type Ring = {
   speed: number; // idle orbit speed (deg/s), sign = direction
 };
 
-function bgRgb() {
-  const hex = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim().replace('#', '');
-  const n = parseInt(hex, 16);
-  return Number.isNaN(n) ? [8, 8, 8] : [(n >> 16) & 255, (n >> 8) & 255, n & 255];
-}
+
 
 export default function TechOrbit({ rings: groups }: { rings: string[][] }) {
   const stage = useRef<HTMLDivElement>(null);
@@ -71,7 +67,6 @@ export default function TechOrbit({ rings: groups }: { rings: string[][] }) {
       Rmax = 0;
 
     // ── abstract systems illustration (no template-owner portrait) ──
-    let spriteReady = true;
     const paintFigure = (force = false) => {
       const deg = ((-spin % 360) + 360) % 360;
       const f = Math.round(deg) % 360;
