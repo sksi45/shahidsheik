@@ -277,7 +277,7 @@ export default function TechOrbit({ rings: groups }: { rings: string[][] }) {
 
     const near = new IntersectionObserver(
       ([en]) => {
-        if (en.isIntersecting && !sprite.src) sprite.src = SPRITE.src;
+        if (en.isIntersecting) paintFigure(true);
       },
       { rootMargin: '900px 0px' },
     );
