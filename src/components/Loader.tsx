@@ -55,7 +55,7 @@ export default function Loader({ onDone }: { onDone: () => void }) {
               animate={{ y: '0%' }}
               transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             >
-              Sushmita<span className="font-serif font-normal italic">.</span>
+              Shahid<span className="font-serif font-normal italic">.</span>
             </motion.h2>
           </div>
           <div className="flex items-end justify-between">
