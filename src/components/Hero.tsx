@@ -222,11 +222,10 @@ export default function Hero({ ready }: { ready: boolean }) {
             </Magnetic>
             <Magnetic>
               <a
-                href={profile.resume || '#contact'}
-                download
+                href="#contact"
                 className="group inline-flex items-center gap-3 rounded-full border border-line bg-bg/70 px-6 py-3.5 text-sm font-medium backdrop-blur-sm transition-colors hover:border-fg"
               >
-                Download résumé
+                Contact me
                 <ArrowUpRight size={16} className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </Magnetic>
