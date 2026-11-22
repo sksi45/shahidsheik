@@ -71,7 +71,7 @@ function Scan() {
         <rect x="566" y="284" width="130" height="6" rx="3" fill="var(--line)" />
         <rect x="566" y="298" width="90" height="6" rx="3" fill="var(--line)" />
       </g>
-      <text x="56" y="508" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">LLM · EXTRACT · ANSWER</text>
+      <text x="56" y="508" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">ECCR · USAGE RECONCILIATION</text>
     </g>
   );
 }
@@ -103,8 +103,8 @@ function Flow() {
       <g style={{ animation: 'pv-blink 2.4s ease-in-out infinite' }}>
         <circle cx="690" cy="122" r="5" fill="var(--fg)" />
       </g>
-      <text x="56" y="80" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">UPI · CARD</text>
-      <text x="56" y="508" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">STRICT PAYMENT STATE MACHINE</text>
+      <text x="56" y="80" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">PWS · API / ORDER SUPPORT</text>
+      <text x="56" y="508" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">API STATUS · INCIDENT FLOW</text>
     </g>
   );
 }
@@ -130,8 +130,8 @@ function Tenants() {
         );
       })}
       <rect x="104" y="104" width="592" height="336" rx="14" fill="none" stroke="var(--fg)" strokeDasharray="6 8" strokeOpacity="0.5" style={{ animation: 'pv-dash 2s linear infinite' }} />
-      <text x="56" y="80" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">SHARED DB · tenant_id ISOLATION</text>
-      <text x="56" y="508" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">JWT · RBAC × 4 LEVELS</text>
+      <text x="56" y="80" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">CEP / AA · CUSTOMER DATA</text>
+      <text x="56" y="508" fontFamily="var(--font-mono)" fontSize="12" fill="var(--muted)" letterSpacing="2">ACCESS · SYNC · CONFIGURATION</text>
     </g>
   );
 }
