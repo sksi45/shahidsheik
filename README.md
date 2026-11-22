@@ -31,9 +31,9 @@ Other things you may want to change:
 
 | What | Where |
 |---|---|
-| Résumé PDF (download buttons) | Contact section (resume link is intentionally omitted until a verified PDF is added) |
+| Résumé file (not linked until a verified PDF is added) | Contact section (resume link is intentionally omitted until a verified PDF is added) |
 | Theme colours (dark and light) | top of `src/index.css` |
-| Hero video | Abstract systems artwork in `src/components/HeroVideo.tsx` |
+| Abstract hero artwork | Abstract systems artwork in `src/components/HeroVideo.tsx` |
 | Spinning figure in Skills | Theme-sensitive abstract artwork |
 
 ## How the site is put together
@@ -42,8 +42,8 @@ Other things you may want to change:
 |---|---|
 | `src/components/PullCord.tsx` | The pull cord that switches dark / light mode |
 | `src/lib/theme.ts` | Theme switching, saved between visits, with the circular reveal |
-| `src/components/Hero.tsx`, `HeroVideo.tsx` | Hero with the giant name and the walking video |
-| `src/components/Expertise.tsx`, `fx/TechOrbit.tsx` | Skills, with the figure that turns as you scroll inside three skill orbits |
+| `src/components/Hero.tsx`, `HeroVideo.tsx` | Hero with the giant name and abstract support-systems artwork |
+| `src/components/Expertise.tsx`, `fx/TechOrbit.tsx` | Skills, with abstract systems artwork that rotates as you scroll inside three skill orbits |
 | `src/components/Projects.tsx`, `ProjectVisual.tsx` | Project cards and case-study overlays |
 | `src/components/Experience.tsx` | Timeline, recognition and certifications |
 | `src/components/Contact.tsx` | Contact links and footer |
