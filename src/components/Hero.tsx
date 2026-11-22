@@ -10,7 +10,7 @@ import { useTheme } from '../lib/theme';
 import HeroVideo from './HeroVideo';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
-const NAME = 'SUSHMITA';
+const NAME = 'SHAHID';
 
 function RotatingRole({ start }: { start: boolean }) {
   const [i, setI] = useState(0);
@@ -110,7 +110,7 @@ export default function Hero({ ready }: { ready: boolean }) {
       transition={{ duration: 1.6, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
       style={{ perspective: 1400 }}
     >
-      {/* she turns to face you → a full turn on every light switch → follows the cursor */}
+      {/* Abstract hero artwork; theme-switch animation remains the signature interaction. */}
       <motion.div
         className="h-full"
         initial={{ rotateY: reduce ? 0 : -30, z: reduce ? 0 : -140 }}
@@ -142,7 +142,7 @@ export default function Hero({ ready }: { ready: boolean }) {
       />
       <DotField />
 
-      {/* Desktop film: big, anchored to the floor, standing in front of the giant name */}
+      {/* Desktop artwork: anchored to the floor, standing in front of the giant name */}
       {desktop && (
       <motion.div
         style={{ y: filmY }}
@@ -203,7 +203,7 @@ export default function Hero({ ready }: { ready: boolean }) {
 
         <motion.div style={{ y: textY, opacity: fade }} className="relative z-20 mt-8 md:mt-10 md:max-w-[46%] lg:max-w-[40%]">
           <motion.p {...fadeIn(0.7)} className="max-w-[36ch] text-[clamp(1.05rem,1.5vw,1.35rem)] leading-[1.4] tracking-[-0.015em] text-muted">
-            A developer who turns ideas into <span className="text-fg">digital experiences</span> — from LLM-powered platforms to payment systems.
+            A production support engineer who turns complex incidents into <span className="text-fg">clear, reliable outcomes</span> across enterprise applications and cloud services.
           </motion.p>
 
           <motion.div {...fadeIn(0.9)} className="mt-8 flex flex-wrap items-center gap-3">
@@ -222,7 +222,7 @@ export default function Hero({ ready }: { ready: boolean }) {
             </Magnetic>
             <Magnetic>
               <a
-                href={profile.resume}
+                href={profile.resume || '#contact'}
                 download
                 className="group inline-flex items-center gap-3 rounded-full border border-line bg-bg/70 px-6 py-3.5 text-sm font-medium backdrop-blur-sm transition-colors hover:border-fg"
               >
