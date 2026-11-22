@@ -248,7 +248,7 @@ export default function Hero({ ready }: { ready: boolean }) {
           </span>
           Scroll to explore
         </button>
-        <span className="hidden sm:block">B.Tech AI &amp; ML · CGPA 9.10</span>
+        <span className="hidden sm:block">B.Tech CSE · Eluru</span>
         <LocalTime />
       </motion.div>
     </section>
