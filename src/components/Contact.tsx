@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import { ArrowUp, ArrowUpRight, Check, Copy, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp, ArrowUpRight, Check, Copy, Linkedin, Mail } from 'lucide-react';
 import { profile } from '../data/portfolio';
 import { scrollToId } from '../lib/scroll';
 import SectionLabel from './ui/SectionLabel';
@@ -54,7 +54,6 @@ function BackToTop() {
 
 const links = [
   { label: 'LinkedIn', href: profile.links.linkedin, icon: Linkedin, note: 'Connect' },
-  { label: 'GitHub', href: profile.links.github, icon: Github, note: '@sksi45' },
   { label: 'Email', href: `mailto:${profile.email}`, icon: Mail, note: 'Write to me' },
 ];
 
@@ -72,7 +71,7 @@ export default function Contact() {
         <div className="md:col-span-7">
           <Reveal>
             <p className="max-w-[40ch] text-muted">
-              Internships, full-time roles, collaborations or a good engineering conversation — my inbox is open.
+              International production / application support opportunities, professional collaborations or a good engineering conversation — my inbox is open.
             </p>
             <Magnetic strength={0.15} className="mt-6 max-w-full">
               <a
