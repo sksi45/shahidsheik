@@ -196,7 +196,6 @@ function CaseStudy({ p, onClose, onNext }: { p: Project; onClose: () => void; on
                 </div>
               ))}
             </dl>
-            <p className="mt-3 font-mono text-[10px] tracking-[0.15em] text-faint uppercase">Figures as reported on my résumé</p>
 
             <div className="mt-16 grid gap-12 md:grid-cols-12 md:gap-6">
               <div className="md:col-span-4">
@@ -273,7 +272,7 @@ export default function Projects() {
     <section id="projects" className="relative px-4 py-24 md:px-8 md:py-32" aria-labelledby="projects-title">
       <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
         <div>
-          <SectionLabel index="03">Selected projects</SectionLabel>
+          <SectionLabel index="03">Selected support work</SectionLabel>
           <h2 id="projects-title" className="mt-6 text-[clamp(2rem,4vw,3.6rem)] leading-[0.98] font-medium tracking-[-0.045em]">
             <SplitText text="Systems I've supported" className="block" />
             <SplitText text="and helped keep reliable." delay={0.12} className="block font-serif font-normal tracking-[-0.03em] italic" />
